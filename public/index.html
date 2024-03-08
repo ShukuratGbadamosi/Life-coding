@@ -11,8 +11,7 @@
     <h1 class="text-center pt-5 text-primary">Mini Mart</h1>
 
 <div class="col-7 mx-auto shadow-lg p-5 rounded-4 col-sm-10 col-md-10" > 
-  <div class="alert alert-danger mx-auto align-center" style="display: none; text-align: center;" id="pls">Please fill
-    something inside of me na</div>
+  <div class="alert alert-danger mx-auto align-center" style="display: none; text-align: center;" id="pls">Please write something inside the cart</div>
   <label for="exampleInputEmail1" class="form-label text-secondary" >Email address</label>
      <input type="text" class="form-control" id="inp">
    <button class="btn btn-sm mx-auto text-center btn-secondary col-12 mt-3" onclick="add()">Add to cart</button>
@@ -53,7 +52,6 @@ const add = () => {
             // alert("submitted")
             let inputOne = document.getElementById("inp").value;
             if (inputOne === "") {
-                // alert("Fill something inside of me now");
                 pls.style.display = "block";
 
             } else {
