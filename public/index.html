@@ -25,7 +25,6 @@
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-    import { getDatabase, ref, set, onValue, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
     // import { GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
     
     // TODO: Add SDKs for Firebase products that you want to use
@@ -62,19 +61,17 @@ const add = () => {
                 pls.style.display = "none";
                 let obj = { time, date, inputOne };
                 console.log(obj);
-                show.style.display = "block";
                 show.innerHTML = `${obj}`
-                let dbRef = push(ref(database, `todos`));
-                let saved = set(dbRef, obj);
-                if (saved) {
-                    console.log("Saved successfully");
-                } else {
-                    console.log("failed to save");
-                }
+                // let dbRef = push(ref(database, `todos`));
+                // let saved = set(dbRef, obj);
+                // if (saved) {
+                //     console.log("Saved successfully");
+                // } else {
+                //     console.log("failed to save");
+                // }
             }
             document.getElementById('inp').value = ""
         };
-
 window.add = add;
 
   </script>
